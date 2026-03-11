@@ -20,7 +20,10 @@ export default function UploadForm() {
     try {
       setLoading(true);
 
-      const res = axios.post(`${import.meta.env.VITE_API_URL}/api/upload`, formData);
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/upload`,
+        formData,
+      );
 
       setMessage(res.data.message);
     } catch (err) {
@@ -54,6 +57,7 @@ export default function UploadForm() {
 
         <button
           onClick={handleSubmit}
+          disabled={loading}
           className="w-full bg-blue-600 text-white py-2 rounded"
         >
           {loading ? "Processing..." : "Upload File"}
