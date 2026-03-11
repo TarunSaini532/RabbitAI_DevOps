@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://your-render-service.onrender.com"|| "http://localhost:5000",
+        url:  "http://localhost:5000",
       },
     ],
   },
