@@ -6,15 +6,15 @@ const options = {
     info: {
       title: "Sales Insight Automator API",
       version: "1.0.0",
-      description: "API for uploading sales data and generating AI summaries"
+      description: "API for uploading sales data and generating AI summaries",
     },
     servers: [
       {
-        url: "http://localhost:5000"
-      }
-    ]
+        url: "https://your-render-service.onrender.com"|| "http://localhost:5000",
+      },
+    ],
   },
-  apis: ["./routes/*.js"]
+  apis: ["./routes/*.js", "./controllers/*.js"],
 };
 
 const swaggerSpec = swaggerJsdoc(options);
